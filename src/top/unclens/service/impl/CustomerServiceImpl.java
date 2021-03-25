@@ -14,4 +14,24 @@ public class CustomerServiceImpl implements CustomerService {
         //调用dao完成查询
         return dao.findAll();
     }
+
+    @Override
+    public void addCustomer(Customer customer) {
+        dao.add(customer);
+    }
+
+    @Override
+    public void deleteCustomer(String id) {
+        dao.delete(Integer.parseInt(id));
+    }
+
+    @Override
+    public Customer findCustomerById(String id) {
+        return dao.findCustomerById(Integer.parseInt(id));
+    }
+
+    @Override
+    public void updateCustomer(Customer customer) {
+        dao.update(customer);
+    }
 }

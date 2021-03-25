@@ -10,4 +10,29 @@ public interface CustomerService {
      * @return
      */
     public List<Customer> fianALL();
+
+    /**
+     *
+     * @param customer
+     */
+    void addCustomer(Customer customer);
+
+    /**
+     *
+     * @param id
+     */
+    void deleteCustomer(String id);
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    Customer findCustomerById(String id);
+
+    /**
+     *
+     * @param customer
+     */
+    void updateCustomer(Customer customer);
 }

@@ -30,6 +30,7 @@
     </style>
 </head>
 <body>
+<div>${user.username},欢迎您！</div>
 <div>
     <a href="${pageContext.request.contextPath}/customerListServlet">
         查询所有用户信息
