@@ -30,7 +30,7 @@ public class AddCustomerServlet extends HttpServlet {
         CustomerService service = new CustomerServiceImpl();
         service.addCustomer(customer);
 
-        response.sendRedirect(request.getContextPath()+"/customerListServlet");
+        response.sendRedirect(request.getContextPath()+"/findCustomerByPageServlet");
     }
 
 

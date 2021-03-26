@@ -17,7 +17,7 @@ public class DeleteCustomerServlet extends HttpServlet {
         CustomerService service = new CustomerServiceImpl();
         service.deleteCustomer(id);
 
-        response.sendRedirect(request.getContextPath()+"/customerListServlet");
+        response.sendRedirect(request.getContextPath()+"/findCustomerByPageServlet");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

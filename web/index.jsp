@@ -32,7 +32,7 @@
 <body>
 <div>${user.username},欢迎您！</div>
 <div>
-    <a href="${pageContext.request.contextPath}/customerListServlet">
+    <a href="${pageContext.request.contextPath}/findCustomerByPageServlet">
         查询所有用户信息
     </a>
 </div>
