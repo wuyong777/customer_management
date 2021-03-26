@@ -6,7 +6,7 @@
 #### 软件架构
 MVC模式：三层架构
 后端技术：Servlet+JavaBean+JSP+EL+JSTL,采用MySQL数据库，用Druid连接池，JdbcTamplate封装连接池对象
-前端计术：HTML+CSS+JS+Bootstrap框架
+前端技术：HTML+CSS+JS+Bootstrap框架
 
 #### 安装教程
 1.  安装ieda，导入项目
