@@ -48,17 +48,25 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
+    @SuppressWarnings("all")
     public int findTotalCount(Map<String, String[]> condition) {
+        //1.定义模板初始化sql
         String sql = "select count(*) from customer where 1 = 1 ";//注意空格
         StringBuilder sb = new StringBuilder(sql);
+        //2.遍历map
         Set<String> keySet = condition.keySet();
+        //定义参数的集合
         List<Object> params = new ArrayList<Object>();
         for (String key : keySet) {
+            //排除分页条件参数
             if ("currentPage".equals(key) || "rows".equals(key)) {
                 continue;
             }
+            //获取value
             String value = condition.get(key)[0];
+            //判断value是否有值
             if (value != null && !"".equals(value)) {
+                //有值则追加条件
                 sb.append(" and " + key + " like ? ");//注意空格
                 params.add("%" + value + "%");// ? 条件的值,注意加 % 号
             }
@@ -69,6 +77,7 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
+    @SuppressWarnings("all")
     public List<Customer> findByPage(int start, int row, Map<String, String[]> condition) {
         String sql = "select * from customer where 1 = 1 ";
         StringBuilder sb = new StringBuilder(sql);
@@ -84,7 +93,9 @@ public class CustomerDaoImpl implements CustomerDao {
                 params.add("%" + value + "%");// ? 条件的值,注意加 % 号
             }
         }
+        //添加分页查询
         sb.append(" limit ? , ? ");
+        //添加分页查询参数值
         params.add(start);
         params.add(row);
         sql = sb.toString();

@@ -15,10 +15,14 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 @WebServlet("/updateCustomerServlet")
+@SuppressWarnings("all")
 public class UpdateCustomerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //1.设置编码
         request.setCharacterEncoding("utf-8");
+        //2.获取map
         Map<String, String[]> parameterMap = request.getParameterMap();
+        //3.封装对象
         Customer customer = new Customer();
         try {
             BeanUtils.populate(customer, parameterMap);
@@ -27,8 +31,10 @@ public class UpdateCustomerServlet extends HttpServlet {
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
+        //4.调用Service修改
         CustomerService service = new CustomerServiceImpl();
         service.updateCustomer(customer);
+        //5.跳转到查询所有Servlet
         response.sendRedirect(request.getContextPath()+"/findCustomerByPageServlet");
     }
 

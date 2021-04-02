@@ -14,10 +14,14 @@ import java.io.IOException;
 @WebServlet("/findCustomerServlet")
 public class FindCustomerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //1.获取id
         String id = request.getParameter("id");
+        //2.调用Service查询
         CustomerService service = new CustomerServiceImpl();
         Customer customer = service.findCustomerById(id);
+        //3.将user存入request
         request.setAttribute("customer",customer);
+        //4.转发到update.jsp
         request.getRequestDispatcher("/update.jsp").forward(request,response);
     }
 

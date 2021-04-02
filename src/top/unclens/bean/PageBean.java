@@ -3,11 +3,11 @@ package top.unclens.bean;
 import java.util.List;
 
 public class PageBean<T> {
-    private int totalCount;
-    private int totalPage;
-    private List<T> list;
-    private int currentPage;
-    private int rows;
+    private int totalCount;//总记录数
+    private int totalPage;//总页数
+    private List<T> list;//每页的数据
+    private int currentPage;//当前页码
+    private int rows;//每页显示的行数
 
     public int getTotalCount() {
         return totalCount;

@@ -7,12 +7,15 @@ import top.unclens.dao.UserDao;
 import top.unclens.util.JDBCUtils;
 
 public class UserDaoImpl implements UserDao {
+    //获取连接
     private JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
 
     @Override
     public User findUserByUsernameAndPassword(String username, String password) {
         try {
+            //1.定义SQL
             String sql = "select * from user where username = ? and password = ? ";
+            //2.执行SQL
             User user = template.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class), username, password);
             return user;
         } catch (Exception e) {

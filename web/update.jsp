@@ -40,8 +40,11 @@
 <div class="container">
     <h3>修改用户信息页面</h3>
     <form action="${pageContext.request.contextPath}/updateCustomerServlet" method="post">
-        <!-- 隐藏域提交id -->
+
+        <!--  隐藏域 提交id-->
         <input type="hidden" name="id" value="${customer.id}">
+
+
         <div class="form-group">
             <label for="inputname">姓名</label>
             <input type="text" class="form-control" id="inputname" name="name" value="${customer.name}" readonly="readonly">

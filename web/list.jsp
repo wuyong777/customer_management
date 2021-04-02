@@ -53,31 +53,40 @@
     </style>
 <script>
     function deleteCustomer(id) {
+        //用户安全提示
         if(confirm("您确定要删除该用户吗?")){
+            //访问路径
             location.href = "${pageContext.request.contextPath}/deleteCustomerServlet?id="+id;
         }
     }
 
     window.onload = function () {
+        //给删除选中按钮添加单击事件
         document.getElementById("delSelected").onclick = function () {
             if (confirm("您确定要删除选中的用户吗？")){
                 var flag = false;
+                //判断是否有选中条目
                 var cids = document.getElementsByName("cid");
                 for (var i = 0; i < cids.length; i++) {
                     if (cids[i].checked) {
+                        //有一个条目选中了
                         flag = true;
                         break;
                     }
                 }
-                if (flag){
+                if (flag){//有条目被选中
+                    //表单提交
                     document.getElementById("selectedform").submit();
                 }
             }
         }
-
+        //1.获取第一个cb
         document.getElementById("firstCheckbox").onclick = function () {
+            //2.获取下边列表中所有的cb
             var cids = document.getElementsByName("cid");
+            //3.遍历
             for (var i = 0; i < cids.length; i++) {
+                //4.设置这些cbs[i]的checked状态 = firstCb.checked
                 cids[i].checked = this.checked;
             }
         }

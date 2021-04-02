@@ -1,13 +1,13 @@
 package top.unclens.bean;
 
 public class Customer {
-    private int id;
-    private String name;
-    private String gender;
-    private int age;
-    private String address;
-    private String qq;
-    private String email;
+    private int id;//客户id
+    private String name;//姓名
+    private String gender;//性别
+    private int age;//年龄
+    private String address;//籍贯地址
+    private String qq;//QQ号
+    private String email;//邮箱地址
 
     public int getId() {
         return id;

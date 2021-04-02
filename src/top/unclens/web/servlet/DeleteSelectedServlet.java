@@ -13,9 +13,12 @@ import java.io.IOException;
 @WebServlet("/deleteSelectedServlet")
 public class DeleteSelectedServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //1.获取所有id
         String[] cids = request.getParameterValues("cid");
+        //2.调用service删除
         CustomerService service = new CustomerServiceImpl();
         service.delSelectedCustomer(cids);
+        //3.跳转查询所有Servlet
         response.sendRedirect(request.getContextPath()+"/findCustomerByPageServlet");
     }
 

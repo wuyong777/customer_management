@@ -5,7 +5,7 @@
 
 #### 软件架构
 MVC模式：三层架构
-后端技术：Servlet+JavaBean+JSP+EL+JSTL,采用MySQL数据库，用Druid连接池，JdbcTamplate封装连接池对象
+后端技术：Servlet+JavaBean+JSP+EL+JSTL,采用MySQL数据库，用Druid连接池，JdbcTamplate封装JDBC开发
 前端技术：HTML+CSS+JS+Bootstrap框架
 
 #### 安装教程
@@ -17,8 +17,9 @@ MVC模式：三层架构
 1.  不同版本的数据库要对应的jar包，不然会报错
 
 #### 实现的功能
-1. 登录
-2. 添加用户
-3. 修改用户
-4. 查询用户，可模糊查询
-5. 分页展示
+1. 登录  带验证码功能
+2. 添加用户  带表单验证
+3. 删除用户  可全选，反选。有安全提示功能
+4. 修改用户  带数据回显功能
+5. 查询用户  可模糊查询，可复杂组合查询
+6. 分页展示  每页显示10条记录

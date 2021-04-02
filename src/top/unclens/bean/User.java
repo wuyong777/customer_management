@@ -1,9 +1,9 @@
 package top.unclens.bean;
 
 public class User {
-    private int id;
-    private String username;
-    private String password;
+    private int id;//用户id
+    private String username;//用户名
+    private String password;//密码
 
     public int getId() {
         return id;

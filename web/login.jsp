@@ -24,7 +24,9 @@
     <script type="text/javascript">
         //切换验证码
         function refreshCode() {
+            //1.获取验证码图片对象
             var vcode = document.getElementById("vcode");
+            //2.设置其src属性，加时间戳
             vcode.src = "${pageContext.request.contextPath}/checkCodeServlet?time="+new Date().getTime();
         }
     </script>
@@ -68,6 +70,7 @@
             <div class="form-group" id="submit">
                 <input type="submit" value="登录" class="btn btn-primary">
             </div>
+            <!-- 出错显示的信息框 -->
             <div class="alert alert-warning alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
                 <strong>${login_msg}</strong>

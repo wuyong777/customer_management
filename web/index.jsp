@@ -29,6 +29,8 @@
         }
     </style>
 </head>
+
+
 <body>
 <div>${user.username},欢迎您！</div>
 <div>

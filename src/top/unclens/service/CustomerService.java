@@ -14,38 +14,38 @@ public interface CustomerService {
     public List<Customer> fianALL();
 
     /**
-     *
+     *添加用户信息
      * @param customer
      */
     void addCustomer(Customer customer);
 
     /**
-     *
+     *删除用户信息
      * @param id
      */
     void deleteCustomer(String id);
 
     /**
-     *
+     *根据id查询用户
      * @param id
      * @return
      */
     Customer findCustomerById(String id);
 
     /**
-     *
+     *更新用户信息
      * @param customer
      */
     void updateCustomer(Customer customer);
 
     /**
-     *
+     *批量删除用户
      * @param cids
      */
     void delSelectedCustomer(String[] cids);
 
     /**
-     *
+     *分页，条件查询
      * @param currentPage
      * @param rows
      * @param condition

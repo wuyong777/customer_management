@@ -13,11 +13,12 @@ public class JDBCUtils {
     private static DataSource dataSource;
     static {
         try {
-            //加载配置文件
+            //1.加载配置文件
             Properties pro = new Properties();
+            //使用ClassLoader加载配置文件，获取字节输入流
             InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream("druid.properties");
             pro.load(is);
-            //初始化连接池对象
+            //2.初始化连接池对象
             dataSource = DruidDataSourceFactory.createDataSource(pro);
         }
         catch (IOException e){
@@ -27,11 +28,11 @@ public class JDBCUtils {
             e.printStackTrace();
         }
     }
-    //获取连接池对象
+    //3.获取连接池对象
     public static DataSource getDataSource(){
         return dataSource;
     }
-    //获取连接
+    //4.获取连接
     public static Connection getConnection() throws SQLException {
         return dataSource.getConnection();
     }
