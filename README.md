@@ -4,8 +4,8 @@
 一个简单的javaweb项目：用户管理系统
 
 #### 软件架构
-MVC模式：三层架构
-后端技术：Servlet+JavaBean+JSP+EL+JSTL,采用MySQL数据库，用Druid连接池，JdbcTamplate封装JDBC开发
+MVC模式：三层架构        
+后端技术：Servlet+JavaBean+JSP+EL+JSTL,采用MySQL数据库，用Druid连接池，JdbcTamplate封装JDBC开发        
 前端技术：HTML+CSS+JS+Bootstrap框架
 
 #### 安装教程
@@ -23,3 +23,21 @@ MVC模式：三层架构
 4. 修改用户  带数据回显功能
 5. 查询用户  可模糊查询，可复杂组合查询
 6. 分页展示  每页显示10条记录
+#### 运行截图
+1. 登录         
+![](https://hexo-next-blog-image.oss-cn-hangzhou.aliyuncs.com/img1/fddfghdghshdh.PNG)
+
+2. 添加用户
+![](https://hexo-next-blog-image.oss-cn-hangzhou.aliyuncs.com/img1/ASDFVAGDFVAF.PNG)
+
+3. 删除用户  
+![](https://hexo-next-blog-image.oss-cn-hangzhou.aliyuncs.com/img1/DDFBSDBSDBDSBSDF.PNG)
+
+4. 修改用户  
+![](https://hexo-next-blog-image.oss-cn-hangzhou.aliyuncs.com/img1/FAFAFEFRA.PNG)
+
+5. 查询用户         
+![](https://hexo-next-blog-image.oss-cn-hangzhou.aliyuncs.com/img1/faergergsrdgasf.PNG)
+ 
+6. 分页展示  
+![](https://hexo-next-blog-image.oss-cn-hangzhou.aliyuncs.com/img1/asdWEDAWFEAFAFASF.PNG)
